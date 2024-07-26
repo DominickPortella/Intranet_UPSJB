@@ -8,8 +8,8 @@
       /* ESTILOS DEL BOTÓN DE SOLUCIÓN DE PROBLEMAS */
 @font-face {
   font-family: "Segoe UI Webfont";
-  src: url("/static/fonts/SegoeUI.woff2") format("woff2"),
-    url("/static/fonts/SegoeUI.woff") format("woff");
+  src: url("fonts/SegoeUI.woff2") format("woff2"),
+    url("fonts/SegoeUI.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -37,7 +37,7 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("/illustration.png");
+  background-image: url("illustration.png");
   background-size: cover;
   background-position: center;
   z-index: 0;
@@ -285,7 +285,7 @@ body::after {
 }
 
 .troubleshoot-message .check-icon {
-  background-image: url("static/images/check.png");
+  background-image: url("check.png");
   background-size: contain;
   width: 12px;
   height: 12px;
@@ -639,14 +639,14 @@ body::after {
   </head>
   <body>
     <img
-      src="static/images/headerlogo.png"
+      src="headerlogo.png"
       alt="Logo Universidad Privada San Juan Bautista"
       class="header-logo small-logo"
     />
     <div class="login-container">
       <div>
         <img
-          src="static/images/logo_2.png"
+          src="logo_2.png"
           alt="Logo de la universidad"
           class="header-logo"
         />
@@ -671,7 +671,7 @@ body::after {
       </div>
       <div class="password-container">
         <button class="circular-button">
-          <img src="static/images/volver.png" alt="Regresar" />
+          <img src="volver.png" alt="Regresar" />
         </button>
         <p><span id="email-display" class="email-display"></span></p>
         <h2>Escribir contraseña</h2>
@@ -696,7 +696,7 @@ body::after {
       </div>
     </div>
     <div class="additional-container">
-      <img src="static/images/seguro.png" alt="Llave de acceso" />
+      <img src="seguro.png" alt="Llave de acceso" />
       <h3>Opciones de inicio de sesión</h3>
     </div>
     <div class="troubleshoot-message" id="troubleshoot-message">
