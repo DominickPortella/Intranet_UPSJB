@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("prev").addEventListener("click", prevImage);
   const logoImg = document.querySelector('.logo img');
   const originalLogoSrc = logoImg.src;
-  const extendedLogoSrc = '/static/images/logo_extendido.png';
+  const extendedLogoSrc = 'static/images/logo_extendido.png';
   const aside = document.querySelector('aside');
   const headerNav = document.querySelector('header nav');
   const footer = document.querySelector('footer');
