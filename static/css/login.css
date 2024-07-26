@@ -33,7 +33,7 @@ body::before {
   background-image: url("static/images/illustration.png");
   background-size: cover;
   background-position: center;
-  z-index: -2;
+  z-index: 0;
 }
 
 body::after {
