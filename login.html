@@ -650,7 +650,6 @@
       <div class="slide-container">
         <h2>Iniciar sesión</h2>
         <form action="{% url 'login' %}" method="POST">
-          {% csrf_token %}
           <input
             type="email"
             name="email"
@@ -658,7 +657,7 @@
             required
             id="email-input"
           />
-          <a href="/ingreso.html" class="forgot-password"
+          <a href="#" class="forgot-password"
             >¿No puede acceder a su cuenta?</a
           >
           <div class="next-button-container">
