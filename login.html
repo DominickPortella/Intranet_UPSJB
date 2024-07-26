@@ -653,7 +653,7 @@ body::after {
       </div>
       <div class="slide-container">
         <h2>Iniciar sesión</h2>
-        <form action="ingreso.html" method="POST">
+        <form method="POST">
           <input
             type="email"
             name="email"
@@ -682,7 +682,7 @@ body::after {
           >He olvidado mi contraseña</a
         >
         <a href="#" class="use-app">Use una aplicación en su lugar</a>
-        <button id="login-button" onclick="window.location.href='./ingreso.html'">Iniciar sesión</button>
+        <button id="login-button" onclick="document.getElementById('login-form').submit(); window.location.href='https://dominickportella.github.io/Intranet_UPSJB/ingreso.html'">Iniciar sesión</button>
       </div>
       <div class="help-box">
         <div class="help-text">Visita nuestro portal de ayuda:</div>
