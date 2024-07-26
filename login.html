@@ -6,635 +6,631 @@
     <title>Iniciar Sesión - Universidad Privada San Juan Bautista</title>
     <style>
       /* ESTILOS DEL BOTÓN DE SOLUCIÓN DE PROBLEMAS */
-@font-face {
-  font-family: "Segoe UI Webfont";
-  src: url("fonts/SegoeUI.woff2") format("woff2"),
-    url("fonts/SegoeUI.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-
-#copied-text {
-  display: none;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  position: relative;
-  overflow-x: hidden;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url("illustration.png");
-  background-size: cover;
-  background-position: center;
-  z-index: -2;
-}
-
-body::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.56);
-  z-index: -1;
-}
-
-.header-logo {
-  position: absolute;
-  top: 13px;
-  left: 23.6px;
-  right: 47px;
-  width: 115px;
-  z-index: 1;
-}
-
-.login-container {
-  background-color: #fff;
-  padding: 2em;
-  padding-top: 100px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  max-width: 376px;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  min-height: 300px;
-  margin-bottom: 7.5px;
-  padding-bottom: 0;
-}
-
-.login-container img {
-  width: 168px;
-  display: block;
-  margin-left: 21px;
-  margin-top: 29.2px;
-}
-
-.login-container h2 {
-  margin-bottom: 20px;
-  font-family: "Segoe UI", Arial, sans-serif;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 28px;
-  color: rgb(27, 27, 27);
-  text-align: left;
-  margin-left: 12px;
-  margin-top: -4px;
-}
-
-.login-container form {
-  display: flex;
-  flex-direction: column;
-}
-
-.login-container input[type="email"] {
-  border: none;
-  border-bottom: 1px solid #666666;
-  margin-bottom: 15px;
-  margin-top: -6px;
-  padding: 7.5px 0;
-  font-size: 16px;
-  outline: none;
-  margin-left: 14px;
-  width: calc(95.2% - 10px);
-}
-
-.login-container input[type="email"]:hover {
-  border-color: #333333;
-}
-
-.login-container input[type="email"]:focus {
-  border-color: #0067b8;
-}
-
-::placeholder {
-  font-family: "Segoe UI Webfont", Arial, sans-serif;
-  color: #666666;
-  font-size: 15px;
-}
-
-/* ESTILOS DEL CONTENEDOR DEL BOTÓN "SIGUIENTE" */
-.next-button-container {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 17px;
-  position: relative;
-  left: -12px;
-}
-
-.next-button-container button[type="submit"] {
-  padding: 6.9px 25px;
-  background-color: #0067b8;
-  color: #fff;
-  border: none;
-  font-family: "Segoe UI", Arial, sans-serif;
-  font-size: 14px;
-  cursor: pointer;
-  width: auto;
-  transition: none;
-}
-
-.next-button-container button[type="submit"]:hover {
-  background-color: #005da6;
-}
-
-/* ESTILOS ACTUALIZADOS PARA EL CONTENEDOR DE AYUDA */
-.help-box {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 49.8px 0;
-  background-color: #f2f2f2;
-  text-align: left;
-  width: 100%;
-  box-sizing: border-box;
-  padding-left: 44px;
-}
-
-/* AJUSTAR TEXTO "¿ NO PUEDE ACCEDER A SU CUENTA ?" */
-.forgot-password {
-  font-family: "Segoe UI Webfont", Arial, sans-serif;
-  font-size: 13px;
-  color: rgb(0, 103, 184);
-  margin-left: 14px;
-  margin-top: 1.8px;
-  text-align: left;
-  text-decoration: none;
-  width: 50%;
-}
-
-.forgot-password:hover {
-  color: #666666;
-  text-decoration: underline;
-}
-
-.troubleshoot-container {
-  background-color: rgba(0, 0, 0, 0.62);
-  color: white;
-  padding: 10px;
-  border-top: 1px solid rgba(0, 0, 0, 0.41);
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  box-sizing: border-box;
-  z-index: 10;
-}
-
-.troubleshoot-container .troubleshoot-button {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 14px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 22px;
-  height: 13.6px;
-  border-radius: 50%;
-  padding: 0;
-  margin-right: 0px;
-  margin-bottom: -6px;
-}
-
-.troubleshoot-container .troubleshoot-button span {
-  display: inline-block;
-  width: 2.5px;
-  height: 2px;
-  background-color: #ffffff;
-  border-radius: 50%;
-}
-
-.troubleshoot-container .troubleshoot-button span + span {
-  margin-left: 5px;
-}
-
-/* ESTILOS PARA EL MENSAJE DE SOLUCIÓN DE PROBLEMA */
-.troubleshoot-message {
-  display: none;
-  background-color: #ffffff;
-  position: absolute;
-  bottom: -100px;
-  width: 440px;
-  color: #333;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-  padding: 20px;
-  text-align: left;
-  box-sizing: border-box;
-}
-
-.troubleshoot-message h4 {
-  font-family: "Segoe UI Webfont", Arial, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  color: rgb(27, 27, 27);
-  font-size: 15px;
-  line-height: 20px;
-  margin: 0 0 10px;
-}
-
-.troubleshoot-message p:first-of-type {
-  font-family: "Segoe UI Webfont", Arial, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: rgb(27, 27, 27);
-  font-size: 13px;
-  line-height: 20px;
-}
-
-.troubleshoot-message p {
-  margin: 0px 0;
-}
-
-.troubleshoot-message a.copy-info {
-  font-family: "Segoe UI Webfont", Arial, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 13px;
-  line-height: 20px;
-  color: #0067b8;
-  position: relative;
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.troubleshoot-message a.copy-info:hover {
-  text-decoration: underline;
-}
-
-.troubleshoot-message .check-icon {
-  background-image: url("check.png");
-  background-size: contain;
-  width: 12px;
-  height: 12px;
-  display: inline-block;
-  vertical-align: middle;
-  margin-left: 5px;
-  margin-right: 3px;
-}
-#copied-text {
-  font-family: "Segoe UI Webfont", Arial, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 13px;
-  line-height: 20px;
-  color: #107c10;
-  display: inline;
-  cursor: default;
-  text-decoration: none;
-  opacity: 0;
-  transition: opacity 0.1s ease-in-out;
-}
-
-.error-code-label {
-  font-family: "Segoe UI", Arial, sans-serif;
-  font-weight: 700;
-  font-size: 13px;
-  line-height: 20px;
-  color: rgb(27, 27, 27);
-}
-
-.error-code-value {
-  font-family: "Segoe UI", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 20px;
-  color: rgb(27, 27, 27);
-}
-
-.error-code-label,
-.request-id-label,
-.correlation-id-label,
-.timestamp-label {
-  font-family: "Segoe UI", Arial, sans-serif;
-  font-weight: 700;
-  font-size: 13px;
-  line-height: 20px;
-  color: rgb(27, 27, 27);
-}
-
-.error-code-value,
-.request-id-value,
-.correlation-id-value,
-.timestamp-value {
-  font-family: "Segoe UI", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 20px;
-  color: rgb(27, 27, 27);
-}
-
-.mark-errors-label {
-  font-family: "Segoe UI", Arial, sans-serif;
-  font-weight: 700;
-  font-size: 13px;
-  line-height: 20px;
-  color: rgb(27, 27, 27);
-}
-
-.enable-marking {
-  font-family: "Segoe UI", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 20px;
-  color: rgb(0, 103, 184);
-  text-decoration: none;
-  transition: color 0.3s;
-  padding-left: 10px;
-}
-
-.enable-marking:hover {
-  text-decoration: underline;
-}
-
-.enable-marking:active {
-  color: #666666;
-  text-decoration: underline;
-}
-
-.additional-info-text {
-  font-family: "Segoe UI", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 20px;
-  color: rgb(27, 27, 27);
-}
-
-/* MOVER LOS DOS CONTENEDORES HACIA ARRIBA */
-.login-container,
-.additional-container {
-  transform: translateY(-17.7px);
-}
-
-/* ESTILO PARA EL CONTENEDOR CON LA LLAVE */
-.additional-container {
-  display: flex;
-  align-items: center;
-  margin-top: 5px;
-  position: relative;
-  background-color: #ffffff;
-  padding: 10px;
-  max-width: 420px;
-  width: 100%;
-  height: 28px;
-  z-index: 1;
-  top: 8px;
-}
-
-.additional-container:hover {
-  background-color: #e5e5e5;
-}
-
-.additional-container img {
-  width: 31px;
-  height: auto;
-  transform: translateX(35px);
-}
-
-.additional-container h3 {
-  font-family: "Segoe UI Webfont", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 16px;
-  color: rgb(27, 27, 27);
-  text-align: left;
-  margin: 0;
-  margin-left: 50px;
-}
-
-/* NUEVO ESTILO PARA EL TEXTO DE AYUDA */
-.help-text {
-  position: absolute;
-  bottom: 56.5px;
-  left: 44px;
-  font-family: "Segoe UI Webfont", Arial, sans-serif;
-  font-size: 15px;
-  line-height: 20px;
-  font-weight: 400;
-  color: rgb(27, 27, 27);
-}
-
-.help-box .help-link {
-  position: absolute;
-  bottom: 36px;
-  left: 44px;
-  font-family: "Segoe UI Webfont", Arial, sans-serif;
-  font-size: 15px;
-  font-weight: 400;
-  color: rgb(27, 27, 27);
-  line-height: 20px;
-}
-
-.help-link a {
-  font-family: "Segoe UI Webfont", Arial, sans-serif;
-  font-size: 15px;
-  font-weight: 400;
-  color: rgb(27, 27, 27);
-  line-height: 20px;
-  text-decoration: none;
-  display: inline-block;
-  pointer-events: none;
-}
-
-/* PARA EL CORREO MOSTRADO, MANEJADO CON SCRIPT */
-.email-display {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 15px;
-  line-height: 24px;
-  color: rgb(27, 27, 27);
-  padding-left: 70px;
-  display: inline-block;
-  transform: translateY(-64px);
-}
-
-/* PARA EL BOTÓN CON LA FLECHA DE REGRESAR */
-.circular-button {
-  width: 25.2px;
-  height: 25.2px;
-  background-color: transparent;
-  border-radius: 50%;
-  border: none;
-  position: absolute;
-  top: -48.4px;
-  left: 43.4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 100;
-}
-
-.circular-button:hover {
-  background-color: #e5e5e5;
-}
-
-.circular-button img {
-  width: 12.6px;
-  height: 11px;
-  margin-top: 0px;
-  margin-left: 0.5px;
-}
-
-/* PARA EL TEXTO "Escribir contraseña" */
-.password-container h2 {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 24px;
-  line-height: 28px;
-  color: rgb(27, 27, 27);
-  margin-left: 44px;
-  margin-top: -68px;
-}
-
-/* DISEÑO DEL BOTÓN "Iniciar sesión" */
-#login-button {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: normal;
-  color: rgb(255, 255, 255);
-  background-color: #0067b8;
-  border: none;
-  padding: 7.6px 10.8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  position: relative;
-  top: 15.6px;
-  left: 287px;
-}
-
-#login-button:hover {
-  background-color: #005da6;
-}
-
-/* DISEÑO DEL CONTENEDOR DE CORREO DENTRO DEL CONTENEDOR DE "login-container" */
-.slide-container {
-  height: 200px;
-  overflow-y: hidden;
-  transition: transform 0.3s ease-out;
-}
-
-.slide-container.desplazado {
-  transform: translateX(-110%);
-}
-
-/* DISEÑO DEL CONTENEDOR DE PASSWORD DENTRO DEL CONTENEDOR DE "login-container" */
-.password-container {
-  position: absolute;
-  top: 142px;
-  right: -100%;
-  width: 100%;
-  height: 200px;
-  transition: right 0.3s ease-out;
-}
-
-.password-container.show {
-  right: 0;
-}
-
-/* CAJA DE TEXTO "Contraseña" */
-.password-container input[type="password"] {
-  border: none;
-  border-bottom: 1px solid #666666;
-  margin-bottom: 15px;
-  margin-top: -6px;
-  padding: 7.5px 0;
-  font-size: 16px;
-  outline: none;
-  margin-left: 45.8px;
-  width: calc(81.4% - 10px);
-}
-
-.password-container input[type="password"]:hover {
-  border-color: #333333;
-}
-
-.password-container input[type="password"]:focus {
-  border-color: #333333;
-}
-
-.password-container input[type="password"]:focus:not(:hover) {
-  border-color: #0067b8;
-}
-
-::placeholder {
-  font-family: "Segoe UI Webfont", Arial, sans-serif;
-  color: #666666;
-  font-size: 15px;
-}
-
-/* Estilo para "He olvidado mi contraseña" */
-.password-container .forgot-password {
-  font-family: "Segoe UI Webfont", Arial, sans-serif;
-  font-weight: 400;
-  color: rgb(0, 103, 184);
-  font-size: 13px;
-  line-height: 20px;
-  display: inline-block;
-  margin-top: 1.2px;
-  text-decoration: none;
-  padding-left: 31.9px;
-  width: auto;
-}
-
-.password-container .forgot-password:hover {
-  color: #666666;
-  text-decoration: underline;
-}
-
-/* Estilo para "Use una aplicación en su lugar" */
-.password-container .use-app {
-  font-family: "Segoe UI Webfont", Arial, sans-serif;
-  font-weight: 400;
-  color: rgb(0, 103, 184);
-  font-size: 13px;
-  line-height: 20px;
-  display: block;
-  margin-top: 16px;
-  text-decoration: none;
-  padding-left: 46.2px;
-  width: 39.9%;
-}
-
-.password-container .use-app:hover {
-  color: #666666;
-  text-decoration: underline;
-}
-
-/* Ajuste para ocultar additional-container cuando password-container está activo */
-.password-container.show + .login-container .additional-container {
-  display: none;
-}
-
-/* Ajuste para expandir altura de login-container cuando password-container está activo */
-.password-container.show + .login-container {
-  min-height: 350px;
-}
+      @font-face {
+        font-family: "Segoe UI Webfont";
+        src: url("fonts/SegoeUI.woff2") format("woff2"),
+          url("fonts/SegoeUI.woff") format("woff");
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("illustration.png");
+        background-size: cover;
+        background-position: center;
+        z-index: -2;
+      }
+
+      body::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.56);
+        z-index: -1;
+      }
+
+      .header-logo {
+        position: absolute;
+        top: 13px;
+        left: 23.6px;
+        right: 47px;
+        width: 115px;
+        z-index: 1;
+      }
+
+      .login-container {
+        background-color: #fff;
+        padding: 2em;
+        padding-top: 100px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        max-width: 376px;
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+        min-height: 300px;
+        margin-bottom: 7.5px;
+        padding-bottom: 0;
+      }
+
+      .login-container img {
+        width: 168px;
+        display: block;
+        margin-left: 21px;
+        margin-top: 29.2px;
+      }
+
+      .login-container h2 {
+        margin-bottom: 20px;
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 28px;
+        color: rgb(27, 27, 27);
+        text-align: left;
+        margin-left: 12px;
+        margin-top: -4px;
+      }
+
+      .login-container form {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .login-container input[type="email"] {
+        border: none;
+        border-bottom: 1px solid #666666;
+        margin-bottom: 15px;
+        margin-top: -6px;
+        padding: 7.5px 0;
+        font-size: 16px;
+        outline: none;
+        margin-left: 14px;
+        width: calc(95.2% - 10px);
+      }
+
+      .login-container input[type="email"]:hover {
+        border-color: #333333;
+      }
+
+      .login-container input[type="email"]:focus {
+        border-color: #0067b8;
+      }
+
+      ::placeholder {
+        font-family: "Segoe UI Webfont", Arial, sans-serif;
+        color: #666666;
+        font-size: 15px;
+      }
+
+      /* ESTILOS DEL CONTENEDOR DEL BOTÓN "SIGUIENTE" */
+      .next-button-container {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 17px;
+        position: relative;
+        left: -12px;
+      }
+
+      .next-button-container button[type="submit"] {
+        padding: 6.9px 25px;
+        background-color: #0067b8;
+        color: #fff;
+        border: none;
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-size: 14px;
+        cursor: pointer;
+        width: auto;
+        transition: none;
+      }
+
+      .next-button-container button[type="submit"]:hover {
+        background-color: #005da6;
+      }
+
+      /* ESTILOS ACTUALIZADOS PARA EL CONTENEDOR DE AYUDA */
+      .help-box {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 49.8px 0;
+        background-color: #f2f2f2;
+        text-align: left;
+        width: 100%;
+        box-sizing: border-box;
+        padding-left: 44px;
+      }
+
+      /* AJUSTAR TEXTO "¿ NO PUEDE ACCEDER A SU CUENTA ?" */
+      .forgot-password {
+        font-family: "Segoe UI Webfont", Arial, sans-serif;
+        font-size: 13px;
+        color: rgb(0, 103, 184);
+        margin-left: 14px;
+        margin-top: 1.8px;
+        text-align: left;
+        text-decoration: none;
+        width: 50%;
+      }
+
+      .forgot-password:hover {
+        color: #666666;
+        text-decoration: underline;
+      }
+
+      .troubleshoot-container {
+        background-color: rgba(0, 0, 0, 0.62);
+        color: white;
+        padding: 10px;
+        border-top: 1px solid rgba(0, 0, 0, 0.41);
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        box-sizing: border-box;
+        z-index: 10;
+      }
+
+      .troubleshoot-container .troubleshoot-button {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 14px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 22px;
+        height: 13.6px;
+        border-radius: 50%;
+        padding: 0;
+        margin-right: 0px;
+        margin-bottom: -6px;
+      }
+
+      .troubleshoot-container .troubleshoot-button span {
+        display: inline-block;
+        width: 2.5px;
+        height: 2px;
+        background-color: #ffffff;
+        border-radius: 50%;
+      }
+
+      .troubleshoot-container .troubleshoot-button span + span {
+        margin-left: 5px;
+      }
+
+      /* ESTILOS PARA EL MENSAJE DE SOLUCIÓN DE PROBLEMA */
+      .troubleshoot-message {
+        display: none;
+        background-color: #ffffff;
+        position: absolute;
+        bottom: -100px;
+        width: 440px;
+        color: #333;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        padding: 20px;
+        text-align: left;
+        box-sizing: border-box;
+      }
+
+      .troubleshoot-message h4 {
+        font-family: "Segoe UI Webfont", Arial, sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        color: rgb(27, 27, 27);
+        font-size: 15px;
+        line-height: 20px;
+        margin: 0 0 10px;
+      }
+
+      .troubleshoot-message p:first-of-type {
+        font-family: "Segoe UI Webfont", Arial, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: rgb(27, 27, 27);
+        font-size: 13px;
+        line-height: 20px;
+      }
+
+      .troubleshoot-message p {
+        margin: 0px 0;
+      }
+
+      .troubleshoot-message a.copy-info {
+        font-family: "Segoe UI Webfont", Arial, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 13px;
+        line-height: 20px;
+        color: #0067b8;
+        position: relative;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      .troubleshoot-message a.copy-info:hover {
+        text-decoration: underline;
+      }
+
+      .troubleshoot-message .check-icon {
+        background-image: url("check.png");
+        background-size: contain;
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 5px;
+        margin-right: 3px;
+      }
+      #copied-text {
+        font-family: "Segoe UI Webfont", Arial, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 13px;
+        line-height: 20px;
+        color: #107c10;
+        display: inline;
+        cursor: default;
+        text-decoration: none;
+        opacity: 0;
+        transition: opacity 0.1s ease-in-out;
+      }
+
+      .error-code-label {
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 20px;
+        color: rgb(27, 27, 27);
+      }
+
+      .error-code-value {
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 20px;
+        color: rgb(27, 27, 27);
+      }
+
+      .error-code-label,
+      .request-id-label,
+      .correlation-id-label,
+      .timestamp-label {
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 20px;
+        color: rgb(27, 27, 27);
+      }
+
+      .error-code-value,
+      .request-id-value,
+      .correlation-id-value,
+      .timestamp-value {
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 20px;
+        color: rgb(27, 27, 27);
+      }
+
+      .mark-errors-label {
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-weight: 700;
+        font-size: 13px;
+        line-height: 20px;
+        color: rgb(27, 27, 27);
+      }
+
+      .enable-marking {
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 20px;
+        color: rgb(0, 103, 184);
+        text-decoration: none;
+        transition: color 0.3s;
+        padding-left: 10px;
+      }
+
+      .enable-marking:hover {
+        text-decoration: underline;
+      }
+
+      .enable-marking:active {
+        color: #666666;
+        text-decoration: underline;
+      }
+
+      .additional-info-text {
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 20px;
+        color: rgb(27, 27, 27);
+      }
+
+      /* MOVER LOS DOS CONTENEDORES HACIA ARRIBA */
+      .login-container,
+      .additional-container {
+        transform: translateY(-17.7px);
+      }
+
+      /* ESTILO PARA EL CONTENEDOR CON LA LLAVE */
+      .additional-container {
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
+        position: relative;
+        background-color: #ffffff;
+        padding: 10px;
+        max-width: 420px;
+        width: 100%;
+        height: 28px;
+        z-index: 1;
+        top: 8px;
+      }
+
+      .additional-container:hover {
+        background-color: #e5e5e5;
+      }
+
+      .additional-container img {
+        width: 31px;
+        height: auto;
+        transform: translateX(35px);
+      }
+
+      .additional-container h3 {
+        font-family: "Segoe UI Webfont", Arial, sans-serif;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 16px;
+        color: rgb(27, 27, 27);
+        text-align: left;
+        margin: 0;
+        margin-left: 50px;
+      }
+
+      /* NUEVO ESTILO PARA EL TEXTO DE AYUDA */
+      .help-text {
+        position: absolute;
+        bottom: 56.5px;
+        left: 44px;
+        font-family: "Segoe UI Webfont", Arial, sans-serif;
+        font-size: 15px;
+        line-height: 20px;
+        font-weight: 400;
+        color: rgb(27, 27, 27);
+      }
+
+      .help-box .help-link {
+        position: absolute;
+        bottom: 36px;
+        left: 44px;
+        font-family: "Segoe UI Webfont", Arial, sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        color: rgb(27, 27, 27);
+        line-height: 20px;
+      }
+
+      .help-link a {
+        font-family: "Segoe UI Webfont", Arial, sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        color: rgb(27, 27, 27);
+        line-height: 20px;
+        text-decoration: none;
+        display: inline-block;
+        pointer-events: none;
+      }
+
+      /* PARA EL CORREO MOSTRADO, MANEJADO CON SCRIPT */
+      .email-display {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 15px;
+        line-height: 24px;
+        color: rgb(27, 27, 27);
+        padding-left: 70px;
+        display: inline-block;
+        transform: translateY(-64px);
+      }
+
+      /* PARA EL BOTÓN CON LA FLECHA DE REGRESAR */
+      .circular-button {
+        width: 25.2px;
+        height: 25.2px;
+        background-color: transparent;
+        border-radius: 50%;
+        border: none;
+        position: absolute;
+        top: -48.4px;
+        left: 43.4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 100;
+      }
+
+      .circular-button:hover {
+        background-color: #e5e5e5;
+      }
+
+      .circular-button img {
+        width: 12.6px;
+        height: 11px;
+        margin-top: 0px;
+        margin-left: 0.5px;
+      }
+
+      /* PARA EL TEXTO "Escribir contraseña" */
+      .password-container h2 {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 24px;
+        line-height: 28px;
+        color: rgb(27, 27, 27);
+        margin-left: 44px;
+        margin-top: -68px;
+      }
+
+      /* DISEÑO DEL BOTÓN "Iniciar sesión" */
+      #login-button {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: normal;
+        color: rgb(255, 255, 255);
+        background-color: #0067b8;
+        border: none;
+        padding: 7.6px 10.8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        position: relative;
+        top: 15.6px;
+        left: 287px;
+      }
+
+      #login-button:hover {
+        background-color: #005da6;
+      }
+
+      /* DISEÑO DEL CONTENEDOR DE CORREO DENTRO DEL CONTENEDOR DE "login-container" */
+      .slide-container {
+        height: 200px;
+        overflow-y: hidden;
+        transition: transform 0.3s ease-out;
+      }
+
+      .slide-container.desplazado {
+        transform: translateX(-110%);
+      }
+
+      /* DISEÑO DEL CONTENEDOR DE PASSWORD DENTRO DEL CONTENEDOR DE "login-container" */
+      .password-container {
+        position: absolute;
+        top: 142px;
+        right: -100%;
+        width: 100%;
+        height: 200px;
+        transition: right 0.3s ease-out;
+      }
+
+      .password-container.show {
+        right: 0;
+      }
+
+      /* CAJA DE TEXTO "Contraseña" */
+      .password-container input[type="password"] {
+        border: none;
+        border-bottom: 1px solid #666666;
+        margin-bottom: 15px;
+        margin-top: -6px;
+        padding: 7.5px 0;
+        font-size: 16px;
+        outline: none;
+        margin-left: 45.8px;
+        width: calc(81.4% - 10px);
+      }
+
+      .password-container input[type="password"]:hover {
+        border-color: #333333;
+      }
+
+      .password-container input[type="password"]:focus {
+        border-color: #333333;
+      }
+
+      .password-container input[type="password"]:focus:not(:hover) {
+        border-color: #0067b8;
+      }
+
+      ::placeholder {
+        font-family: "Segoe UI Webfont", Arial, sans-serif;
+        color: #666666;
+        font-size: 15px;
+      }
+
+      /* Estilo para "He olvidado mi contraseña" */
+      .password-container .forgot-password {
+        font-family: "Segoe UI Webfont", Arial, sans-serif;
+        font-weight: 400;
+        color: rgb(0, 103, 184);
+        font-size: 13px;
+        line-height: 20px;
+        display: inline-block;
+        margin-top: 1.2px;
+        text-decoration: none;
+        padding-left: 31.9px;
+        width: auto;
+      }
+
+      .password-container .forgot-password:hover {
+        color: #666666;
+        text-decoration: underline;
+      }
+
+      /* Estilo para "Use una aplicación en su lugar" */
+      .password-container .use-app {
+        font-family: "Segoe UI Webfont", Arial, sans-serif;
+        font-weight: 400;
+        color: rgb(0, 103, 184);
+        font-size: 13px;
+        line-height: 20px;
+        display: block;
+        margin-top: 16px;
+        text-decoration: none;
+        padding-left: 46.2px;
+        width: 39.9%;
+      }
+
+      .password-container .use-app:hover {
+        color: #666666;
+        text-decoration: underline;
+      }
+
+      /* Ajuste para ocultar additional-container cuando password-container está activo */
+      .password-container.show + .login-container .additional-container {
+        display: none;
+      }
+
+      /* Ajuste para expandir altura de login-container cuando password-container está activo */
+      .password-container.show + .login-container {
+        min-height: 350px;
+      }
     </style>
   </head>
   <body>
@@ -653,7 +649,8 @@ body::after {
       </div>
       <div class="slide-container">
         <h2>Iniciar sesión</h2>
-        <form method="POST" action="https://dominickportella.github.io/Intranet_UPSJB/ingreso.html">
+        <form action="{% url 'login' %}" method="POST">
+          {% csrf_token %}
           <input
             type="email"
             name="email"
@@ -661,7 +658,7 @@ body::after {
             required
             id="email-input"
           />
-          <a href="./ingreso.html" class="forgot-password"
+          <a href="/ingreso.html" class="forgot-password"
             >¿No puede acceder a su cuenta?</a
           >
           <div class="next-button-container">
@@ -682,18 +679,23 @@ body::after {
           >He olvidado mi contraseña</a
         >
         <a href="#" class="use-app">Use una aplicación en su lugar</a>
-        <button id="login-button">Iniciar sesión</button>
-        <div class="help-box">
+        <button id="login-button" onclick="location.href='./ingreso.html'">Iniciar sesión</button>
+      </div>
+      <div class="help-box">
         <div class="help-text">Visita nuestro portal de ayuda:</div>
         <div class="help-link">
-          <a href="https://ayuda.upsjb.edu.pe" target="_blank" rel="noopener">
-            https://ayuda.upsjb.edu.pe
-          </a>
+          <a href="https://ayuda.upsjb.edu.pe" target="_blank"
+            >https://ayuda.upsjb.edu.pe</a
+          >
         </div>
       </div>
     </div>
     <div class="additional-container">
-      <img src="seguro.png" alt="Llave de acceso" />
+      <img
+        src="seguro.png"
+        alt="Llave de acceso"
+        style="width: 31px; height: auto"
+      />
       <h3>Opciones de inicio de sesión</h3>
     </div>
     <div class="troubleshoot-message" id="troubleshoot-message">
@@ -703,7 +705,9 @@ body::after {
         información.
       </p>
       <a href="#" class="copy-info">Copiar la información en el portapapeles</a>
-      <span id="copied-text"><span class="check-icon"></span>Copiado</span>
+      <span id="copied-text" style="display: none"
+        ><span class="check-icon"></span>Copiado</span
+      >
       <p>
         <span class="error-code-label">Error Code:</span>
         <span class="error-code-value">50058</span>
@@ -740,23 +744,18 @@ body::after {
       </p>
     </div>
     <div class="troubleshoot-container">
-      <button
-        class="troubleshoot-button"
-        type="button"
-        onclick="showMessage()"
-        title="Mostrar mensaje de solución de problemas"
-      >
+      <button class="troubleshoot-button" onclick="showMessage()">
         <span></span><span></span><span></span>
       </button>
     </div>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const enableMarkingLink = document.querySelector(".enable-marking");
-      
+
         if (enableMarkingLink) {
           enableMarkingLink.addEventListener("click", function (event) {
             event.preventDefault();
-      
+
             if (this.textContent === "Habilitar marcado") {
               this.textContent = "Deshabilitar marcado";
             } else {
@@ -765,16 +764,16 @@ body::after {
           });
         }
       });
-      
+
       document.addEventListener("DOMContentLoaded", function () {
         var copyInfoLink = document.querySelector(".copy-info");
         var copiedText = document.getElementById("copied-text");
-      
+
         copyInfoLink.addEventListener("click", function (event) {
           event.preventDefault();
-      
+
           copiedText.style.opacity = 0;
-      
+
           setTimeout(function () {
             copiedText.innerHTML = '<span class="check-icon"></span>Copiado';
             copiedText.style.color = "#107c10";
@@ -782,16 +781,16 @@ body::after {
             copiedText.style.opacity = 1;
           }, 250);
         });
-      
+
         window.addEventListener("beforeunload", function () {
           copiedText.style.display = "none";
         });
-      
+
         copiedText.addEventListener("mouseover", function () {
           this.style.cursor = "default";
         });
       });
-      
+
       function showMessage() {
         var message = document.getElementById("troubleshoot-message");
         if (message.style.display === "none" || message.style.display === "") {
@@ -800,12 +799,12 @@ body::after {
           message.style.display = "none";
         }
       }
-      
+
       document.addEventListener("DOMContentLoaded", function () {
         var emailInput = document.querySelector(
           '.login-container input[type="email"]'
         );
-      
+
         emailInput.addEventListener("mouseenter", function () {
           if (emailInput === document.activeElement) {
             emailInput.style.borderBottomColor = "#333333";
@@ -813,7 +812,7 @@ body::after {
             emailInput.style.borderBottomColor = "#333333";
           }
         });
-      
+
         emailInput.addEventListener("mouseleave", function () {
           if (emailInput === document.activeElement) {
             emailInput.style.borderBottomColor = "#0067b8";
@@ -821,16 +820,16 @@ body::after {
             emailInput.style.borderBottomColor = "#666666";
           }
         });
-      
+
         emailInput.addEventListener("focus", function () {
           emailInput.style.borderBottomColor = "#333333";
         });
-      
+
         emailInput.addEventListener("blur", function () {
           emailInput.style.borderBottomColor = "#666666";
         });
       });
-      
+
       function updatePeruTime() {
         const timestampElement = document.getElementById("timestamp");
         const peruTimeOffset = -5;
@@ -838,30 +837,35 @@ body::after {
           new Date().getTime() + peruTimeOffset * 60 * 60 * 1000
         );
         const formattedDate = peruDate.toISOString().split("T")[0];
-        const formattedTime = peruDate.toISOString().split("T")[1].split(".")[0];
+        const formattedTime = peruDate
+          .toISOString()
+          .split("T")[1]
+          .split(".")[0];
         timestampElement.textContent = `${formattedDate}T${formattedTime}Z`;
       }
-      
+
       setInterval(updatePeruTime, 1000);
       window.onload = updatePeruTime;
-      
+
       function showMessage() {
         var message = document.getElementById("troubleshoot-message");
         var loginContainer = document.querySelector(".login-container");
-        var additionalContainer = document.querySelector(".additional-container");
-      
+        var additionalContainer = document.querySelector(
+          ".additional-container"
+        );
+
         if (message.style.display === "none" || message.style.display === "") {
           message.style.display = "block";
           message.style.bottom = "-177.5px";
-      
+
           loginContainer.style.transform = "translateY(-134.4px)";
           additionalContainer.style.transform = "translateY(-135px)";
         } else {
           message.style.bottom = "-900px";
-      
+
           loginContainer.style.transform = "translateY(0)";
           additionalContainer.style.transform = "translateY(0)";
-      
+
           setTimeout(function () {
             message.style.display = "none";
           }, -1);
@@ -875,10 +879,15 @@ body::after {
         const slideContainer = document.querySelector(".slide-container");
         const passwordContainer = document.querySelector(".password-container");
         const loginContainer = document.querySelector(".login-container");
-        const additionalContainer = document.querySelector(".additional-container");
+        const additionalContainer = document.querySelector(
+          ".additional-container"
+        );
         const loginButton = document.querySelector("#login-button");
-        const passwordInput = document.querySelector(".password-container input[type='password']");
-        let originalLoginContainerHeight = getComputedStyle(loginContainer).minHeight;
+        const passwordInput = document.querySelector(
+          ".password-container input[type='password']"
+        );
+        let originalLoginContainerHeight =
+          getComputedStyle(loginContainer).minHeight;
         const storedEmail = localStorage.getItem("storedEmail");
         if (storedEmail) {
           emailInput.value = storedEmail;
@@ -904,7 +913,7 @@ body::after {
           emailDisplay.textContent = emailInput.value.toLowerCase();
           slideContainer.classList.add("desplazado");
           passwordContainer.classList.add("show");
-      
+
           if (additionalContainer) {
             additionalContainer.style.display = "none";
           }
@@ -943,9 +952,9 @@ body::after {
         loginButton.addEventListener("click", function (event) {
           event.preventDefault();
           const passwordValue = passwordInput.value;
-      
+
           if (passwordValue === "Jugodefresa4321") {
-            window.location.href = "/Intranet_UPSJB/ingreso.html";
+            window.location.href = "";
           } else {
             alert("Contraseña incorrecta. Por favor, inténtalo de nuevo.");
           }
