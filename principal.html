@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interfaz Digital</title>
+    <link rel="stylesheet" href="/static/css/principal.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <img
+              src="/static/images/ico_TV.png"
+              alt="Blackboard icon"
+              class="tv-icon"
+            />
+            <a href="https://upsjb.blackboard.com/?new_loc=%2Fultra%2Fcourse"
+              >Blackboard</a
+            >
+          </li>
+          <li class="zoom-item">
+            <img
+              class="zoom-icon"
+              src="/static/images/ico_recording.png"
+              alt="Zoom icon"
+            />
+            <a
+            href="https://upsjb-edu-pe.zoom.us/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Zoom</a>
+          </li>
+          <li class="onedrive-item">
+            <img
+              class="onedrive-icon"
+              src="/static/images/ico_cloud.png"
+              alt="Onedrive icon"
+            />
+            <a
+              href="https://upsjb-my.sharepoint.com/_layouts/15/MyBraryFirstRun.aspx?FirstRunStage=waiting"
+              >Onedrive</a
+            >
+          </li>
+          <li class="correo-item">
+            <img
+              class="correo-icon"
+              src="/static/images/ico_message.png"
+              alt="Correo icon"
+            />
+            <a href="https://outlook.office365.com/mail/">Correo</a>
+          </li>
+          <li class="repositorio-item">
+            <img
+              class="repositorio-icon"
+              src="/static/images/ico_notification.png"
+              alt="Repositorio icon"
+            />
+            <a href="https://repositorio.upsjb.edu.pe/">Repositorio</a>
+          </li>
+        </ul>
+        <div class="icons">
+          <img src="/static/images/ico_clock.png" alt="Clock icon" />
+          <img src="/static/images/ico_help.png" alt="Help icon" />
+        </div>
+        <div class="user-info">
+          <img src="/static/images/ico_profile.png" alt="imagen" />
+          <div class="textos">
+            <span>ANGELA.ROJAS</span>
+            <span class="header-info">ESTUDIANTE</span>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="content">
+      <aside>
+        <div class="logo">
+          <img src="/static/images/logo_terceario.png" alt="Logo" />
+        </div>
+        <ul>
+          <li>
+            <a href="#" class="inicio"><span>Inicio</span></a>
+          </li>
+          <li>
+            <a
+              href="https://app.upsjb.edu.pe/tramites/login"
+              target="_blank"
+              class="mis_trámites"
+              rel="noopener noreferrer"
+            >
+              <span>Mis Trámites</span>
+            </a>
+          </li>
+          
+          <li>
+            <a
+              href="https://campus.upsjb.edu.pe/psp/cs92prd/?cmd=login&languageCd=ESP&"
+              class="pagos_en_linea"
+              ><span>Pagos en Línea</span></a
+            >
+          </li>
+          <li>
+            <a class="informacion_academica">
+              <span
+                class="dropdown-span"
+                onclick="this.classList.toggle('active');"
+              >
+                Información Académica
+                <img
+                  src="/static/images/despliegue.png"
+                  alt="Desplegar"
+                  class="dropdown-arrow"
+                />
+              </span>
+            </a>
+            <ul class="submenu">
+              <li><a href="#" class="option-icon">Mi Horario</a></li>
+              <li><a href="#" class="option-icon">Mis Calificaciones</a></li>
+              <li><a href="#" class="option-icon">Mi Record Académico</a></li>
+              <li><a href="#" class="option-icon">Mis Notas Aprobadas</a></li>
+              <li><a href="#" class="option-icon">Requisitos</a></li>
+            </ul>
+          </li>
+          <li>
+            <a
+              href="https://intranet.upsjb.edu.pe/intranet/encuestas-biblioteca"
+              class="portal_de_biblioteca"
+              ><span>Portal de Biblioteca</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://account.activedirectory.windowsazure.com/ChangePassword.aspx?BrandContextID=O365&ruO365="
+              class="cambiar_mi_contraseña"
+              ><span>Cambiar Mi Contraseña</span></a
+            >
+          </li>
+        </ul>
+      </aside>
+      <main>
+        <div class="intro-text">
+          <h1 class="main-title">¿Qué quieres hacer hoy?</h1>
+          <h2 class="sub-title">
+            Descubre todo lo que te ofrecemos de manera 100% digital
+          </h2>
+        </div>
+        <div class="cards">
+          <div class="card requisitos">
+            <h2>Requisitos</h2>
+            <p>Conoce qué requisitos tienes pendientes</p>
+            <button><span>Ir a conocer</span></button>
+          </div>
+          <div class="card tramites">
+            <h2>Mis Trámites</h2>
+            <p>Conoce tus trámites disponibles</p>
+            <button><span>Ir a conocer</span></button>
+          </div>
+          <div class="card pagos">
+            <h2>Pagos en Línea</h2>
+            <p>Conoce tus pagos pendientes</p>
+            <button><span>Ir a conocer</span></button>
+          </div>
+          <div class="card horario">
+            <h2>Mi Horario</h2>
+            <p>Conoce tu horario de clases</p>
+            <button><span>Ir a conocer</span></button>
+          </div>
+          <div class="card calificaciones">
+            <h2>Mis Calificaciones</h2>
+            <p>Conoce tus calificaciones</p>
+            <button><span>Ir a conocer</span></button>
+          </div>
+          <div class="card record_academico">
+            <h2>Mi Record Académico</h2>
+            <p>Conoce tu record académico</p>
+            <button onclick="window.location.replace('record_academico.html')">Ir a conocer</button>
+          </div>
+          <div class="card notas_aprobadas">
+            <h2>Mis Notas Aprobadas</h2>
+            <p>Conoce tus notas aprobadas</p>
+            <button><span>Ir a conocer</span></button>
+          </div>
+          <div class="card actualizar_datos">
+            <h2>Actualizar Mis Datos</h2>
+            <p>Actualiza tu información</p>
+            <button><span>Ir a conocer</span></button>
+          </div>
+          <div class="card fotocheck">
+            <h2>Fotocheck</h2>
+            <p>Revisa tu fotocheck virtual</p>
+            <button><span>Ir a conocer</span></button>
+          </div>
+          <div class="card portal_biblioteca">
+            <h2>Portal de Biblioteca</h2>
+            <p>Visita el Portal de Biblioteca</p>
+            <button><span>Ir a conocer</span></button>
+          </div>
+          <div class="card inscripcion">
+            <h2>Inscripción</h2>
+            <p>Cursos Vacacionales</p>
+            <button><span>Ir a conocer</span></button>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+      <div class="modal-container">
+        <div class="modal-header">
+          <h2 class="modal-title">Noticias & Comunicados</h2>
+          <span class="close">&times;</span>
+        </div>
+        <!-- Contenedor de imágenes en el modal -->
+        <div class="inner-container">
+          <div class="carousel-container">
+            <a
+              href="https://mailing.upsjb.edu.pe/detalles-importantes-sobre-la-matricula-2024-i"
+              target="_blank"
+            >
+              <img
+                src="/static/images/banner.jpeg"
+                alt="Anuncio Publicitario"
+                class="carousel-image active"
+              />
+            </a>
+            <a
+              href="https://mailing.upsjb.edu.pe/comunicado-de-pensiones-2024-i-1"
+              target="_blank"
+            >
+              <img
+                src="/static/images/banner_pensiones.jpg"
+                alt="Banner Pensiones"
+                class="carousel-image"
+                style="display: none"
+              />
+            </a>
+            <a
+              href="https://mailing.upsjb.edu.pe/formas-de-pago"
+              target="_blank"
+            >
+              <img
+                src="/static/images/banner_pagos.png"
+                alt="Banner Pagos"
+                class="carousel-image"
+                style="display: none"
+              />
+            </a>
+            <a
+              href="https://mailing.upsjb.edu.pe/-temporary-slug-e549011f-f581-4e38-8c18-1ffbdb907718?hs_preview=AGwIeExP-135145694741"
+              target="_blank"
+            >
+              <img
+                src="/static/images/banner_DNI.png"
+                alt="Banner DNI"
+                class="carousel-image"
+                style="display: none"
+              />
+            </a>
+
+            <!-- Agrega las flechas de navegación fuera de los enlaces -->
+            <div class="carousel-arrow carousel-arrow-left" id="prev">
+              <img
+                src="/static/images/flecha_izquierda.png"
+                alt="Flecha izquierda"
+              />
+            </div>
+            <div class="carousel-arrow carousel-arrow-right" id="next">
+              <img
+                src="/static/images/flecha_derecha.png"
+                alt="Flecha derecha"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>UPSJB © 2024. Todos los derechos reservados.</p>
+    </footer>
+    <script src="/static/scripts/principal.js"></script>
+  </body>
+</html>

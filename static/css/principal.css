@@ -1,0 +1,1517 @@
+/* Estilos generales del body */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(247, 247, 255, 255);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-bottom: 123px;
+  overflow-x: hidden;
+}
+
+/* Estilos del header */
+/* Estilos del nav del header */
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 8.6px 20px;
+  box-shadow: 0 2px 3px rgba(40, 40, 40, 0.08);
+  position: fixed;
+  top: 0;
+  left: 70px;
+  right: 0;
+  transition: left 0.3s;
+  z-index: 1;
+}
+
+/* DISEÑO PARA EL ELEMENTO DE TV */
+header nav ul li {
+  margin-right: 20px;
+}
+
+header nav ul li img.tv-icon {
+  margin-right: 12.76px;
+  transform: scale(1.2) scaleX(1) scaleY(0.95) translateY(0.94px);
+}
+
+header nav ul li a {
+  letter-spacing: 0.5px;
+}
+
+header nav ul li:first-child {
+  transform: translateX(30px);
+}
+
+/* DISEÑO PARA EL ELEMENTO DE ZOOM */
+.zoom-item {
+  transform: translateX(40px);
+  display: flex;
+  align-items: center;
+  gap: 19px;
+}
+
+.zoom-icon {
+  transform: scale(1.2, 0.84) translate(1.6px, -1.4px);
+}
+
+/* DISEÑO PARA EL ELEMENTO DE ONEDRIVE */
+.onedrive-item {
+  transform: translateX(64.1px);
+  letter-spacing: 0.5px;
+}
+
+.onedrive-icon {
+  transform: scale(2.35, 1.1) translate(-5px, 2px);
+}
+
+/* DISEÑO PARA EL ELEMENTO CORREO */
+.correo-item {
+  transform: translateX(88.7px);
+}
+
+.correo-icon {
+  transform: scale(1.2, 0.96) translate(-10.5px, 1.2px);
+}
+
+/* DISEÑO PARA EL ELEMENTO REPOSITORIO */
+.repositorio-item {
+  transform: translateX(113.5px);
+}
+
+.repositorio-icon {
+  transform: scale(1.1, 1.2) translate(-11px, 1.2px);
+}
+
+/* Estilos del nav expandido del header */
+header nav.expanded {
+  left: 300px;
+}
+
+/* Estilos del logo del header */
+header .logo img {
+  height: 40px;
+}
+
+/* Estilos de la lista del header */
+header ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos de los items de la lista del header */
+header ul li {
+  margin-right: 20px;
+}
+
+/* Estilos de los enlaces de la lista del header */
+header ul li a {
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: 500;
+  color: rgb(65, 60, 60);
+  font-size: 15px;
+  line-height: 23px;
+}
+
+/* Estilos de la información del usuario en el header */
+header .user-info {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Estilos de los textos del usuario en el header */
+header .user-info span {
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 23px;
+  color: rgb(65, 60, 60);
+}
+
+/* Estilos de la información adicional del usuario en el header */
+header .user-info .header-info {
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  color: rgb(169, 168, 168);
+}
+
+/* Estilos de las imágenes de la lista del header */
+header nav ul li img {
+  width: 15px;
+  height: 15px;
+}
+
+/* Estilos de las imágenes de los iconos del header */
+header nav .icons img {
+  width: 15px;
+  height: 15px;
+}
+
+/* Estilos de la imagen del usuario en el header */
+header .user-info img {
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+/* Estilos de los textos del usuario en el header */
+header .user-info .textos {
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-23px);
+  letter-spacing: 0.5px;
+}
+
+/* Estilos de la información del usuario */
+/* LÍNEA VERTICAL AL COSTADO DEL PERFIL */
+.user-info::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 216.05px;
+  bottom: 0;
+  width: 0.3px;
+  background-color: rgba(240, 240, 240, 255);
+}
+
+/* Estilos de la imagen del usuario */
+.user-info img {
+  transform: translate(-32px, 12.2px) scale(1.2);
+}
+
+/* Estilos de la información adicional del usuario */
+.header-info {
+  transform: translateY(-0.8px);
+}
+
+/* Estilos de la imagen del usuario en el nav */
+header nav .user-info img {
+  width: 15px;
+  height: 15px;
+}
+
+.icons {
+  position: absolute;
+  top: 0;
+  right: 20px;
+}
+
+.icons img {
+  transform: translateX(-202px) translateY(22px) scale(1.3);
+  margin-right: 25px;
+}
+
+/* Estilos del contenido */
+.content {
+  display: flex;
+  flex: 1;
+}
+
+/* Estilos del logo */
+.logo {
+  position: relative;
+  top: 2px;
+}
+
+/* Estilos de la imagen del logo */
+.logo img {
+  max-width: 50px;
+  height: auto;
+  margin-left: -10px;
+  margin-top: -10px;
+  height: 55px;
+}
+
+/* Estilos del logo extendido */
+.logo-extended {
+  width: 85px;
+  height: 66px;
+  object-fit: cover;
+  position: absolute;
+  top: 6px;
+  right: 118px;
+  z-index: 1;
+  transition: none;
+  pointer-events: none;
+  overflow: visible;
+}
+
+/* Estilos del borde debajo del logo */
+.logo::after {
+  content: "";
+  display: block;
+  width: calc(100% + 40px);
+  height: 0.1px;
+  background-color: rgba(228, 228, 228, 255);
+  margin-top: 8px;
+  position: absolute;
+  left: -20px;
+}
+
+/* Estilos del aside */
+aside {
+  background-color: rgb(255, 10, 63);
+  color: rgb(255, 206, 217);
+  padding: 20px;
+  width: 30px;
+  overflow: hidden;
+  flex-shrink: 0;
+  font-family: sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: width 0.3s;
+  height: 100vh;
+  z-index: 1;
+}
+
+/* Estilos del aside en hover */
+aside:hover {
+  width: 260px;
+}
+
+/* Estilos de la lista del aside */
+aside ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 16.19px 0 0 0;
+}
+
+/* Estilos de los items de la lista del aside */
+aside ul li {
+  margin-bottom: 1px;
+  margin-left: -10px;
+  transform: translateY(10px);
+}
+
+/* Estilos de los enlaces de la lista del aside */
+aside ul li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  font-size: 15px;
+  line-height: 1.2;
+  font-weight: 400;
+  padding: 10.8px 8px;
+  width: calc(100% - -10px);
+  margin-bottom: 6px;
+  padding-left: 40px;
+  box-sizing: border-box;
+  transition: color 0.3s;
+}
+
+/* Estilos de los textos de los enlaces de la lista del aside */
+aside ul li a span {
+  margin-left: 10px;
+  display: inline-block;
+}
+
+/* Estilos de los enlaces del aside */
+aside a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 15px;
+  line-height: 23px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  background-image: url("/static/images/hogar.png");
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-origin: content-box;
+  background-position: -25px center;
+  padding-left: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: background-color 0.3s;
+}
+
+/* Estilos de los textos de los enlaces del aside */
+aside a span {
+  margin-left: 10px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+/* Estilos de los enlaces del aside */
+aside a::after {
+  content: "";
+}
+
+/* Estilos de los items de la lista del aside en hover */
+aside li:hover {
+  color: #fff;
+}
+
+/* Estilos de los enlaces del aside en hover */
+aside a:hover {
+  background-color: rgba(226, 22, 88, 1);
+}
+
+/* Estilos de los enlaces del aside con clase inicio */
+aside ul li a.inicio {
+  background-color: rgba(226, 22, 88, 1);
+}
+
+/* DISEÑO PARA "INICIO" */
+aside ul li a.inicio {
+  background-image: url("/static/images/ico_home.png");
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: -25px center;
+  padding-left: 40px;
+  transform: scaleY(1.04) translateY(1px) translateX(-1px);
+}
+
+/* DISEÑO PARA "MIS TRÁMITES" */
+aside ul li a.mis_trámites {
+  background-image: url("/static/images/ico_bookshop.png");
+  background-repeat: no-repeat;
+  background-size: 18px 20.38px;
+  background-position: -24.4px 1px;
+  padding-left: 40px;
+  filter: opacity(0.66) drop-shadow(0 0 0 rgb(255, 206, 217));
+}
+
+aside ul li a.mis_trámites:hover {
+  filter: none;
+}
+
+/* DISEÑO PARA "PAGOS EN LÍNEA" */
+aside ul li a.pagos_en_linea {
+  background-image: url("/static/images/ico_card.png");
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: -25px center;
+  padding-left: 40px;
+  filter: opacity(0.66) drop-shadow(0 0 0 rgb(255, 206, 217));
+}
+
+aside ul li a.pagos_en_linea:hover {
+  filter: none;
+}
+
+/* DISEÑO PARA "INFORMACIÓN ACADÉMICA" */
+.informacion_academica {
+  background-image: url("/static/images/ico_file.png");
+  background-repeat: no-repeat;
+  background-size: 20px 19px;
+  background-position: -25px center;
+  padding-left: 40px;
+  text-decoration: none;
+  color: inherit;
+  font-size: 15px;
+  line-height: 23px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  background-origin: content-box;
+  white-space: nowrap;
+  overflow: hidden;
+  transition: background-color 0.3s;
+  filter: opacity(0.66) drop-shadow(0 0 0 rgb(255, 206, 217));
+}
+
+.informacion_academica:hover {
+  filter: none;
+}
+
+/* DISEÑO PARA "PORTAL DE BIBLIOTECA" */
+aside ul li a.portal_de_biblioteca {
+  background-image: url("/static/images/ico_book.png");
+  background-repeat: no-repeat;
+  background-size: 18px 19px;
+  background-position: -25px center;
+  padding-left: 40px;
+  filter: opacity(0.66) drop-shadow(0 0 0 rgb(255, 206, 217));
+}
+
+aside ul li a.portal_de_biblioteca:hover {
+  filter: none;
+}
+
+/* DISEÑO PARA "CAMBIAR MI CONTRASEÑA" */
+aside ul li a.cambiar_mi_contraseña {
+  background-image: url("/static/images/ico_padlock.png");
+  background-repeat: no-repeat;
+  background-size: 16px 20px;
+  background-position: -25px center;
+  padding-left: 40px;
+  filter: opacity(0.66) drop-shadow(0 0 0 rgb(255, 206, 217));
+}
+
+aside ul li a.cambiar_mi_contraseña:hover {
+  filter: none;
+}
+
+/* Estilos del main */
+main {
+  flex-grow: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilos del contenido central del main */
+main .center-content {
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+}
+
+/* Estilos del título del main */
+main h1 {
+  margin-top: 0;
+  font-weight: normal;
+  color: #333;
+}
+
+/* Estilos del footer */
+footer {
+  background-color: #fff;
+  padding: 5px;
+  text-align: center;
+  color: #333;
+  height: 24.85px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 70px;
+  right: 0;
+  transition: left 0.3s;
+  border-top: 1px solid rgba(228, 228, 228, 1);
+}
+
+/* Estilos del footer expandido */
+footer.expanded {
+  left: 300px;
+}
+
+/* Estilos del párrafo del footer expandido */
+footer.expanded p {
+  transform: translateX(-155px) translateY(-12px);
+}
+
+/* Estilos del párrafo del footer */
+footer p {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(76, 82, 88);
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: 0.5px;
+  transform: translateX(-40px) translateY(-12px);
+}
+
+/* Estilos del modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilos del contenedor del modal */
+.modal-container {
+  background-color: #fefefe;
+  margin: 5% auto;
+  border: 1px solid #888;
+  width: 75%;
+  max-width: 800px;
+  padding: 10px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Estilos del header del modal */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: 1px solid rgba(136, 136, 136, 0.5);
+  margin: 0 -20px;
+}
+
+/* Estilos del títulodel modal */
+.modal-title {
+  font-family: sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: rgb(76, 82, 88);
+  font-size: 24px;
+  line-height: 36px;
+}
+
+.modal-header h2 {
+  margin: 0;
+}
+
+/* Estilos del contenedor interno del modal */
+.inner-container {
+  background-color: white;
+  padding: 10px;
+  width: 92%;
+  margin: 40px auto;
+  border-radius: 5px;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 4px 6px rgba(0, 0, 0, 0.2);
+  margin-bottom: 25px;
+}
+
+/* Estilos del contenido del modal */
+.modal-content {
+  text-align: center;
+}
+
+/* Estilos del botón de cierre del modal */
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Estilos del botón de cierre del modal en hover */
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+}
+
+/* Estilos de la imagen del modal */
+.modal img {
+  width: 100%;
+  height: auto;
+}
+
+/* Estilos del contenedor del carrusel */
+.carousel-container {
+  position: relative;
+  width: 97%;
+  max-width: 800px;
+  overflow: hidden;
+  margin: 12px auto;
+}
+
+/* Estilos de la imagen del carrusel */
+.carousel-image {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+/* Estilos de la imagen activa del carrusel */
+.carousel-image.active {
+  display: block;
+}
+
+/* Estilos de las flechas del carrusel */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 2;
+  opacity: 0.7;
+}
+
+/* Estilos de la flecha izquierda del carrusel */
+.carousel-arrow-left {
+  left: 30px;
+}
+
+/* Estilos de la flecha derecha del carrusel */
+.carousel-arrow-right {
+  right: 30px;
+}
+
+/* Estilos de la imagen de las flechas del carrusel */
+.carousel-arrow img {
+  width: 32px;
+  height: 32px;
+}
+
+/* Estilos de las flechas del carrusel en hover */
+.carousel-arrow:hover {
+  opacity: 1;
+  filter: brightness(0) invert(1);
+}
+
+/* Pseudo-elementos para aumentar el área de activación de las flechas */
+.carousel-arrow::before {
+  content: "";
+  position: absolute;
+  top: -165px;
+  bottom: -165px;
+  left: -35px;
+  right: -35px;
+  z-index: -1;
+}
+
+/* Estilos de las flechas del carrusel */
+.carousel-arrow-left::before {
+  left: -50px;
+}
+
+.carousel-arrow-right::before {
+  right: -50px;
+}
+
+/* Estilos del título principal */
+.main-title {
+  font-family: sans-serif;
+  font-weight: 500;
+  color: rgb(50, 50, 50);
+  font-size: 40px;
+  line-height: 48px;
+  margin-bottom: 10px;
+}
+
+/* Estilos del subtítulo */
+.sub-title {
+  font-family: sans-serif;
+  font-weight: 500;
+  color: rgb(83, 86, 90);
+  font-size: 28px;
+  line-height: 34px;
+  margin-bottom: 20px;
+}
+
+/* Estilos del texto de introducción */
+.intro-text {
+  position: relative;
+  top: 72px;
+}
+
+/* Estilos del título principal */
+.main-title {
+  position: relative;
+  left: 186.4px;
+  letter-spacing: 0.5px;
+}
+
+/* Estilos del subtítulo */
+.sub-title {
+  position: relative;
+  top: -11px;
+  left: 35px;
+  letter-spacing: 0.5px;
+}
+
+/* Estilos del título del modal */
+.modal-title {
+  font-family: sans-serif;
+  font-weight: 500;
+  color: rgb(76, 82, 88);
+  font-size: 24px;
+  line-height: 36px;
+}
+
+/* Estilos del menú de opciones */
+.dropdown-toggle {
+  position: relative;
+}
+
+.dropdown-arrow {
+  width: 10px;
+  height: 9px;
+  margin-left: 45px;
+  vertical-align: middle;
+  margin-top: 2px;
+  transform: rotate(90deg);
+  transition: transform 0.3s ease-in-out;
+  filter: grayscale(100%) opacity(0.5);
+}
+
+.dropdown-span.active .dropdown-arrow.active {
+  transform: rotate(0deg);
+  filter: none;
+}
+
+.dropdown-toggle span {
+  cursor: pointer;
+}
+
+.dropdown-toggle span::after {
+  content: "\25BC";
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transition: transform 0.2s ease-in-out;
+}
+
+.dropdown-toggle:hover span::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* Estilos del submenu */
+.submenu {
+  display: none;
+  position: absolute;
+  padding: 15px;
+  top: -2px;
+  border: none;
+}
+
+.submenu li {
+  margin-bottom: 10px;
+}
+
+.submenu li a {
+  color: #fff;
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  text-decoration: none;
+  border: none;
+  box-shadow: none;
+  padding-left: 50px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.option-icon {
+  background-size: 12px;
+  padding-left: 20px;
+}
+
+/* Estilos para mover los elementos cuando el menú esté abierto */
+.submenu-open {
+  position: relative;
+  top: 170px;
+}
+
+/* DISEÑO DE TODAS LAS CARDS */
+/* Estilos de la grilla de tarjetas */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  justify-items: center;
+}
+
+/* Estilos de las tarjetas */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+}
+
+/* CARD REQUISITOS */
+.requisitos {
+  transform: translate(-1px, 68.4px);
+  height: 167.95px;
+  border-radius: 30.2px;
+  width: 229px;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.201);
+  transition: box-shadow 0.3s;
+}
+
+.requisitos h2 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: rgb(255, 10, 65);
+  font-size: 20px;
+  line-height: 24px;
+  transform: translateY(32px);
+  letter-spacing: 0.5px;
+}
+
+.requisitos p {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(76, 82, 88);
+  font-size: 14px;
+  line-height: 20.4px;
+  transform: translateY(16px);
+  letter-spacing: 0.5px;
+}
+
+.requisitos button {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background-color: transparent;
+  color: rgba(255, 10, 65, 255);
+  border: 0.1px solid rgba(255, 10, 65, 255);
+  font-size: 16px;
+  line-height: 24px;
+  transform: translate(0, 18.5px);
+  padding: 6.2px 65.16px;
+  border-radius: 15px;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  margin-left: 0.2px;
+}
+
+.requisitos button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 10, 65, 255);
+}
+
+.requisitos:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.201);
+}
+
+.requisitos button span {
+  position: relative;
+  top: -0.5px;
+}
+
+/* CARD TRÁMITES */
+.tramites {
+  transform: translate(23px, 68.4px);
+  height: 146.36px;
+  border-radius: 30px;
+  width: 228.95px;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.201);
+  transition: box-shadow 0.3s;
+}
+
+.tramites h2 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: rgb(255, 10, 65);
+  font-size: 20px;
+  line-height: 24px;
+  transform: translateY(32px);
+  letter-spacing: 0.5px;
+}
+
+.tramites p {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(76, 82, 88);
+  font-size: 14px;
+  line-height: 20.4px;
+  transform: translateY(16px);
+  letter-spacing: 0.5px;
+}
+
+.tramites button {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background-color: transparent;
+  color: rgba(255, 10, 65, 255);
+  border: 0.1px solid rgba(255, 10, 65, 255);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  transform: translate(0, 17.2px);
+  padding: 6px 65.16px;
+  border-radius: 15px;
+  white-space: nowrap;
+  margin-left: 0.2px;
+}
+
+.tramites button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 10, 65, 255);
+}
+
+.tramites:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.201);
+}
+
+.tramites button span {
+  position: relative;
+  top: 0.4px;
+}
+
+/* CARD PAGOS EN LÍNEA*/
+.pagos {
+  transform: translate(46.4px, 68.4px);
+  height: 146.36px;
+  border-radius: 30px;
+  width: 229.8px;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.201);
+  transition: box-shadow 0.3s;
+}
+
+.pagos h2 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: rgb(255, 10, 65);
+  font-size: 20px;
+  line-height: 24px;
+  transform: translateY(32px);
+  letter-spacing: 0.5px;
+}
+
+.pagos p {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(76, 82, 88);
+  font-size: 14px;
+  line-height: 20.4px;
+  transform: translateY(16px);
+  letter-spacing: 0.5px;
+}
+
+.pagos button {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background-color: transparent;
+  color: rgba(255, 10, 65, 255);
+  border: 0.1px solid rgba(255, 10, 65, 255);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  transform: translate(0, 17.2px);
+  padding: 6px 65.16px;
+  border-radius: 15px;
+  white-space: nowrap;
+  margin-left: 0.2px;
+}
+
+.pagos button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 10, 65, 255);
+}
+
+.pagos:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.201);
+}
+
+.pagos button span {
+  position: relative;
+  top: 0.4px;
+}
+
+/* CARD MI HORARIO */
+.horario {
+  transform: translate(70px, 68.4px);
+  height: 146.36px;
+  border-radius: 30px;
+  width: 227.98px;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.201);
+  transition: box-shadow 0.3s;
+}
+
+.horario h2 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: rgb(255, 10, 65);
+  font-size: 20px;
+  line-height: 24px;
+  transform: translateY(32px);
+  letter-spacing: 0.5px;
+}
+
+.horario p {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(76, 82, 88);
+  font-size: 14px;
+  line-height: 20.4px;
+  transform: translateY(16px);
+  letter-spacing: 0.5px;
+}
+
+.horario button {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background-color: transparent;
+  color: rgba(255, 10, 65, 255);
+  border: 0.1px solid rgba(255, 10, 65, 255);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  transform: translate(0, 17.2px);
+  padding: 6px 65.16px;
+  border-radius: 15px;
+  white-space: nowrap;
+  margin-left: 0.2px;
+}
+
+.horario button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 10, 65, 255);
+}
+
+.horario:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.201);
+}
+
+.horario button span {
+  position: relative;
+  top: 0.4px;
+}
+
+/* CARD MIS CALIFICACIONES */
+.calificaciones {
+  transform: translate(-1px, 68.4px);
+  height: 146.36px;
+  border-radius: 30px;
+  width: 228.95px;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.201);
+  transition: box-shadow 0.3s;
+}
+
+.calificaciones h2 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: rgb(255, 10, 65);
+  font-size: 20px;
+  line-height: 24px;
+  transform: translateY(32px);
+  letter-spacing: 0.5px;
+}
+
+.calificaciones p {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(76, 82, 88);
+  font-size: 14px;
+  line-height: 20.4px;
+  transform: translateY(16px);
+  letter-spacing: 0.5px;
+}
+
+.calificaciones button {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background-color: transparent;
+  color: rgba(255, 10, 65, 255);
+  border: 0.1px solid rgba(255, 10, 65, 255);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  transform: translate(0, 17.2px);
+  padding: 6px 65.16px;
+  border-radius: 15px;
+  white-space: nowrap;
+  margin-left: 0.2px;
+}
+
+.calificaciones button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 10, 65, 255);
+}
+
+.calificaciones:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.201);
+}
+
+.calificaciones button span {
+  position: relative;
+  top: 0.4px;
+}
+
+/* CARD MI RECORD ACADEMICO */
+.record_academico {
+  transform: translate(23px, 68.4px);
+  height: 146.36px;
+  border-radius: 30px;
+  width: 228.95px;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.201);
+  transition: box-shadow 0.3s;
+}
+
+.record_academico h2 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: rgb(255, 10, 65);
+  font-size: 20px;
+  line-height: 24px;
+  transform: translateY(32px);
+  letter-spacing: 0.5px;
+}
+
+.record_academico p {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(76, 82, 88);
+  font-size: 14px;
+  line-height: 20.4px;
+  transform: translateY(16px);
+  letter-spacing: 0.5px;
+}
+
+.record_academico button {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background-color: transparent;
+  color: rgba(255, 10, 65, 255);
+  border: 0.1px solid rgba(255, 10, 65, 255);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  transform: translate(0, 17.2px);
+  padding: 6px 65.16px;
+  border-radius: 15px;
+  white-space: nowrap;
+  margin-left: 0.2px;
+}
+
+.record_academico button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 10, 65, 255);
+}
+
+.record_academico:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.201);
+}
+
+.record_academico button span {
+  position: relative;
+  top: 0.4px;
+}
+
+/* CARD MIS NOTAS APROBADAS */
+.notas_aprobadas {
+  transform: translate(46.4px, 68.4px);
+  height: 146.36px;
+  border-radius: 30px;
+  width: 229.8px;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.201);
+  transition: box-shadow 0.3s;
+}
+
+.notas_aprobadas h2 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: rgb(255, 10, 65);
+  font-size: 20px;
+  line-height: 24px;
+  transform: translateY(32px);
+  letter-spacing: 0.5px;
+}
+
+.notas_aprobadas p {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(76, 82, 88);
+  font-size: 14px;
+  line-height: 20.4px;
+  transform: translateY(16px);
+  letter-spacing: 0.5px;
+}
+
+.notas_aprobadas button {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background-color: transparent;
+  color: rgba(255, 10, 65, 255);
+  border: 0.1px solid rgba(255, 10, 65, 255);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  transform: translate(0, 17.2px);
+  padding: 6px 65.16px;
+  border-radius: 15px;
+  white-space: nowrap;
+  margin-left: 0.2px;
+}
+
+.notas_aprobadas button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 10, 65, 255);
+}
+
+.notas_aprobadas:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.201);
+}
+
+.notas_aprobadas button span {
+  position: relative;
+  top: 0.4px;
+}
+
+/* CARD ACTUALIZAR MIS DATOS */
+.actualizar_datos {
+  transform: translate(70px, 68.4px);
+  height: 146.36px;
+  border-radius: 30px;
+  width: 227.98px;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.201);
+  transition: box-shadow 0.3s;
+}
+
+.actualizar_datos h2 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: rgb(255, 10, 65);
+  font-size: 20px;
+  line-height: 24px;
+  transform: translateY(32px);
+  letter-spacing: 0.5px;
+}
+
+.actualizar_datos p {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(76, 82, 88);
+  font-size: 14px;
+  line-height: 20.4px;
+  transform: translateY(16px);
+  letter-spacing: 0.5px;
+}
+
+.actualizar_datos button {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background-color: transparent;
+  color: rgba(255, 10, 65, 255);
+  border: 0.1px solid rgba(255, 10, 65, 255);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  transform: translate(0, 17.2px);
+  padding: 6px 65.16px;
+  border-radius: 15px;
+  white-space: nowrap;
+  margin-left: 0.2px;
+}
+
+.actualizar_datos button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 10, 65, 255);
+}
+
+.actualizar_datos:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.201);
+}
+
+.actualizar_datos button span {
+  position: relative;
+  top: 0.4px;
+}
+
+/* CARD FOTOCHECK */
+.fotocheck {
+  transform: translate(-1px, 68.4px);
+  height: 146.36px;
+  border-radius: 30px;
+  width: 228.95px;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.201);
+  transition: box-shadow 0.3s;
+}
+
+.fotocheck h2 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: rgb(255, 10, 65);
+  font-size: 20px;
+  line-height: 24px;
+  transform: translateY(32px);
+  letter-spacing: 0.5px;
+}
+
+.fotocheck p {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(76, 82, 88);
+  font-size: 14px;
+  line-height: 20.4px;
+  transform: translateY(16px);
+  letter-spacing: 0.5px;
+}
+
+.fotocheck button {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background-color: transparent;
+  color: rgba(255, 10, 65, 255);
+  border: 0.1px solid rgba(255, 10, 65, 255);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  transform: translate(0, 17.2px);
+  padding: 6px 65.16px;
+  border-radius: 15px;
+  white-space: nowrap;
+  margin-left: 0.2px;
+}
+
+.fotocheck button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 10, 65, 255);
+}
+
+.fotocheck:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.201);
+}
+
+.fotocheck button span {
+  position: relative;
+  top: 0.4px;
+}
+
+/* CARD PORTAL BIBLIOTECA */
+.portal_biblioteca {
+  transform: translate(23px, 68.4px);
+  height: 146.36px;
+  border-radius: 30px;
+  width: 228.95px;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.201);
+  transition: box-shadow 0.3s;
+}
+
+.portal_biblioteca h2 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: rgb(255, 10, 65);
+  font-size: 20px;
+  line-height: 24px;
+  transform: translateY(32px);
+  letter-spacing: 0.5px;
+}
+
+.portal_biblioteca p {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(76, 82, 88);
+  font-size: 14px;
+  line-height: 20.4px;
+  transform: translateY(16px);
+  letter-spacing: 0.5px;
+}
+
+.portal_biblioteca button {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background-color: transparent;
+  color: rgba(255, 10, 65, 255);
+  border: 0.1px solid rgba(255, 10, 65, 255);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  transform: translate(0, 17.2px);
+  padding: 6px 65.16px;
+  border-radius: 15px;
+  white-space: nowrap;
+  margin-left: 0.2px;
+}
+
+.portal_biblioteca button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 10, 65, 255);
+}
+
+.portal_biblioteca:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.201);
+}
+
+.portal_biblioteca button span {
+  position: relative;
+  top: 0.4px;
+}
+
+/* CARD INSCRIPCIÓN */
+.inscripcion {
+  transform: translate(46.4px, 68.4px);
+  height: 146.36px;
+  border-radius: 30px;
+  width: 229.8px;
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.201);
+  transition: box-shadow 0.3s;
+}
+
+.inscripcion h2 {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: rgb(255, 10, 65);
+  font-size: 20px;
+  line-height: 24px;
+  transform: translateY(32px);
+  letter-spacing: 0.5px;
+}
+
+.inscripcion p {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: rgb(76, 82, 88);
+  font-size: 14px;
+  line-height: 20.4px;
+  transform: translateY(16px);
+  letter-spacing: 0.5px;
+}
+
+.inscripcion button {
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  background-color: transparent;
+  color: rgba(255, 10, 65, 255);
+  border: 0.1px solid rgba(255, 10, 65, 255);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  transform: translate(0, 17.2px);
+  padding: 6px 65.16px;
+  border-radius: 15px;
+  white-space: nowrap;
+  margin-left: 0.2px;
+}
+
+.inscripcion button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 10, 65, 255);
+}
+
+.inscripcion:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.201);
+}
+
+.inscripcion button span {
+  position: relative;
+  top: 0.4px;
+}
